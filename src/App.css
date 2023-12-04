@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.name {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  color: #0f0f0f;
+  background: linear-gradient(
+    135deg,
+    rgba(33, 150, 243, 0.7),
+    rgba(0, 188, 212, 0.7)
+  );
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.8);
+  float: left;
+}
+
+.title-1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  color: #b0fb61;
+  background: rgba(249, 250, 254, 0.9);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px, 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 4px solid rgba(249, 250, 254, 0.31);
+}
+
+.title-1:hover {
+  background: rgba(249, 249, 255, 0.49);
+  color: #61dafb;
+  border-radius: 10px;
+  box-shadow: 0 4px, 30px rgba(64, 64, 64, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 3px solid rgba(255, 249, 255, 0.19);
+}
