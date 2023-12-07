@@ -1,39 +1,27 @@
 import "./App.css";
-import { User } from'./User';
+import { useState } from "react";
 
 function App() {
+  const [numbr, setNumbr] = useState(1);
+  const increaseNumbr = () => {
+    setNumbr(numbr + 1);
+  };
 
-  const planets = [
-    { planetName: "Earth", isRockPlanet: true },
-    { planetName: "Mars", isRockPlanet: true },
-    { planetName: "Venus", isRockPlanet: true },
-    { planetName: "Jupiter", isRockPlanet: false },
-    { planetName: "Neptune", isRockPlanet: false },
-    { planetName: "Uranus", isRockPlanet: false },
-    { planetName: "Mercury", isRockPlanet: true },
-    ];
+  const decreaseNumbr = () => {
+    setNumbr(numbr - 1);
+  };
 
-  // return <div className='App'>
-  //   <h2>Planets</h2>
-  //   {planets.map((user, key) => {
-  //     return <User planetName={user.planetName} isRockPlanet={user.isRockPlanet=false} />
-  //   })}
-  //   <h2>Gas Planets</h2>
-  // </div>
-  const allPlanets = planets.map((planet, key) => <User key={key} planetName={planet.planetName} />);
-  const gasPlanets = planets.filter(planet => !planet.isRockPlanet).map((planet, key) => <User key={key} planetName={planet.planetName} />);
-
+  const setToZero = () => {
+    setNumbr(0);
+  };
   return (
-    <div className='App'>
-      <h1 className='name'>Planets</h1>
-      <h2 className='title-1'>{allPlanets} </h2>
-
-      <h1 className='name'>Gas Planets</h1>
-      <h2 className='title-1'>{gasPlanets} </h2>
+    <div className="App">
+      <button onClick={increaseNumbr}> Increment </button>
+      <button onClick={decreaseNumbr}> Decrement </button>
+      <button onClick={setToZero}> Zero </button>
+      <h1>{numbr}</h1>
     </div>
   );
-
 }
-
 
 export default App;
